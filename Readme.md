@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Dmitry Udaltsov](https://up.htmlacademy.ru/htmlcss/20/user/74469).
-* Наставник: `Андрей grandmaus Островский` (https://htmlacademy.ru/profile/grandmaus).
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
