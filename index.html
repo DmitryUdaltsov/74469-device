@@ -291,7 +291,15 @@
   </footer>
   <section class="modal modal-mail">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <!-- здесь будет форма -->
+    <form class="modal-send-mail">
+      <label for="customer-name" class="modal-label">Ваше имя:</label>
+      <input type="text" name="customer-name" id="customer-name" class="customer-name" placeholder="Имя Фамилия">
+      <label for="customer-email" class="modal-label">Ваш e-mail:</label>
+      <input type="email" name="customer-email" id="customer-email" class="customer-email" placeholder="email@example.com">
+      <label for="customer-text" class="modal-label">Текст письма:</label>
+      <textarea id="customer-text" class="customer-text" placeholder="В свободной форме"></textarea>
+      <input type="submit" class="link" value="Отправить">
+    </form>
     <span class="modal-close">x</span>
   </section>
   <section class="modal modal-map">
