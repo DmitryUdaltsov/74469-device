@@ -14,9 +14,9 @@
         </a>
     </div>
     <div class="site-search">
-        <form>
+        <form action="" method="get">
             <input type="text" class="searchbox" title="search" autofocus>
-            <input type="submit">
+            <button type="submit"></button>
         </form>
     </div>
     <div class="navigation-user">
@@ -78,9 +78,9 @@
     <section class="advert-box">
         <h2 class="visually-hidden">Рекламные слайдеры</h2>
         <ul class="radio-list">
-            <li><input type="radio" title="advert-select" class="radio-item" checked></li>
-            <li><input type="radio" title="advert-select" class="radio-item"></li>
-            <li><input type="radio" title="advert-select" class="radio-item"></li>
+            <li><input type="radio" title="advert-select" class="radio-item" value="slider-1" checked></li>
+            <li><input type="radio" title="advert-select" class="radio-item" value="slider-2"></li>
+            <li><input type="radio" title="advert-select" class="radio-item" value="slider-3"></li>
         </ul>
         <ul class="advert-list">
             <li class="advert-item">
@@ -312,14 +312,14 @@
                placeholder="email@example.com">
         <label for="customer-text" class="modal-label">Текст письма:</label>
         <textarea id="customer-text" class="customer-text" placeholder="В свободной форме"></textarea>
-        <input type="submit" class="link" value="Отправить">
+        <button type="submit" class="link">Отправить</button>
     </form>
-    <span class="modal-close">x</span>
+    <button class="modal-close">x</button>
 </section>
 <section class="modal modal-map">
     <h2 class="visually-hidden">Расположение на карте</h2>
     <img src="img/map-big.jpg" height="559" width="960" class="modal-map">
-    <span class="modal-close">x</span>
+    <button class="modal-close">x</button>
 </section>
 </body>
 </html>

@@ -12,9 +12,9 @@
         </a>
     </div>
     <div class="site-search">
-        <form>
+        <form action="" method="get">
             <input type="text" class="searchbox" title="search" autofocus>
-            <input type="submit">
+            <button type="submit"></button>
         </form>
     </div>
     <div class="navigation-user">
@@ -116,16 +116,16 @@
                 <div class="filters-container-price">
                     <fieldset>
                         <legend>Стоимость</legend>
-                        <ul class="option-slider-select-list">
-                            <input type="range" name="maxpriceinput"
-                                   id="maxpriceinput" min="0" max="10000" value="5000">
-                            <li class="option-slider-select-item">
-                                <span>0</span>
-                            </li>
-                            <li class="option-slider-select-item">
-                                <output name="maxpriceoutput">5000</output>
-                            </li>
-                        </ul>
+                        <input type="range" name="maxpriceinput" id="maxpriceinput" min="0" max="10000"
+                               value="5000">
+                        <label>
+                            <span>от</span>
+                            <input type="number" name="minprice" class="number-input" value="0">
+                        </label>
+                        <label>
+                            <span>до</span>
+                            <input type="number" name="maxprice" class="number-input" value="5000">
+                        </label>
                     </fieldset>
                 </div>
                 <div class="filters-container-color">
@@ -135,33 +135,35 @@
                             <li class="option-check-select-item">
                                 <label>
                                     <input type="checkbox" title="option-select" class="option-check-select-input"
-                                           checked>
+                                           value="color-black" checked>
                                     <span>Черный</span>
                                 </label>
                             </li>
                             <li class="option-check-select-item">
                                 <label>
-                                    <input type="checkbox" title="option-select" class="option-check-select-input">
+                                    <input type="checkbox" title="option-select" class="option-check-select-input"
+                                           value="color-white">
                                     <span>Белый</span>
                                 </label>
                             </li>
                             <li class="option-check-select-item">
                                 <label>
                                     <input type="checkbox" title="option-select" class="option-check-select-input"
-                                           checked>
+                                           value="color-blue" checked>
                                     <span>Синий</span>
                                 </label>
                             </li>
                             <li class="option-check-select-item">
                                 <label>
                                     <input type="checkbox" title="option-select" class="option-check-select-input"
-                                           checked>
+                                           value="color-red" checked>
                                     <span>Красный</span>
                                 </label>
                             </li>
                             <li class="option-check-select-item">
                                 <label>
-                                    <input type="checkbox" title="option-select" class="option-check-select-input">
+                                    <input type="checkbox" title="option-select" class="option-check-select-input"
+                                           value="color-pink">
                                     <span>Розовый</span>
                                 </label>
                             </li>
@@ -175,14 +177,14 @@
                             <li class="option-radio-select-item">
                                 <label>
                                     <input type="radio" name="radio-group" title="option-select"
-                                           class="option-radio-select-input" checked>
+                                           class="option-radio-select-input" value="bluetooth-with" checked>
                                     <span>Есть</span>
                                 </label>
                             </li>
                             <li class="option-radio-select-item">
                                 <label>
                                     <input type="radio" name="radio-group" title="option-select"
-                                           class="option-radio-select-input">
+                                           value="bluetooth-without" class="option-radio-select-input">
                                     <span>Нет</span>
                                 </label>
                             </li>
