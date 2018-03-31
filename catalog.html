@@ -12,7 +12,10 @@
         </a>
     </div>
     <div class="site-search">
-        <input class="searchbox" title="search">
+        <form>
+            <input type="text" class="searchbox" title="search" autofocus>
+            <input type="submit">
+        </form>
     </div>
     <div class="navigation-user">
         <ul class="nav-user-list">
@@ -97,7 +100,7 @@
                 <a href="#sortbypopular">По популярности</a>
             </li>
         </ul>
-        <ul class="sort-direction-list>
+        <ul class="sort-direction-list">
             <li class="sort-direction-item">
                 <a href="#sortasc">По-возрастанию</a>
             </li>
@@ -107,60 +110,88 @@
         </ul>
     </section>
     <section class="filters">
-        <div class="filters-container">
-            <h2 class="section-title">Фильтр</h2>
-            <div class="filters-container-price">
-                <h3 class="section-subtitle">Стоимость</h3>
-                <ul class="option-slider-select-list">
-                    <input type="range" min="0" max="5000">
-                    <li class="option-slider-select-item">
-                        <span>min</span>
-                    </li>
-                    <li class="option-slider-select-item">
-                        <span>max</span>
-                    </li>
-                </ul>
+        <form oninput="maxpriceoutput.value=maxpriceinput.value">
+            <div class="filters-container">
+                <h2 class="section-title">Фильтр</h2>
+                <div class="filters-container-price">
+                    <fieldset>
+                        <legend>Стоимость</legend>
+                        <ul class="option-slider-select-list">
+                            <input type="range" name="maxpriceinput"
+                                   id="maxpriceinput" min="0" max="10000" value="5000">
+                            <li class="option-slider-select-item">
+                                <span>0</span>
+                            </li>
+                            <li class="option-slider-select-item">
+                                <output name="maxpriceoutput">5000</output>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="filters-container-color">
+                    <fieldset>
+                        <legend>Цвет</legend>
+                        <ul class="option-check-select-list">
+                            <li class="option-check-select-item">
+                                <label>
+                                    <input type="checkbox" title="option-select" class="option-check-select-input"
+                                           checked>
+                                    <span>Черный</span>
+                                </label>
+                            </li>
+                            <li class="option-check-select-item">
+                                <label>
+                                    <input type="checkbox" title="option-select" class="option-check-select-input">
+                                    <span>Белый</span>
+                                </label>
+                            </li>
+                            <li class="option-check-select-item">
+                                <label>
+                                    <input type="checkbox" title="option-select" class="option-check-select-input"
+                                           checked>
+                                    <span>Синий</span>
+                                </label>
+                            </li>
+                            <li class="option-check-select-item">
+                                <label>
+                                    <input type="checkbox" title="option-select" class="option-check-select-input"
+                                           checked>
+                                    <span>Красный</span>
+                                </label>
+                            </li>
+                            <li class="option-check-select-item">
+                                <label>
+                                    <input type="checkbox" title="option-select" class="option-check-select-input">
+                                    <span>Розовый</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="filters-container-bt">
+                    <fieldset>
+                        <legend>Bluetooth</legend>
+                        <ul class="option-radio-select-list">
+                            <li class="option-radio-select-item">
+                                <label>
+                                    <input type="radio" name="radio-group" title="option-select"
+                                           class="option-radio-select-input" checked>
+                                    <span>Есть</span>
+                                </label>
+                            </li>
+                            <li class="option-radio-select-item">
+                                <label>
+                                    <input type="radio" name="radio-group" title="option-select"
+                                           class="option-radio-select-input">
+                                    <span>Нет</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <button type="submit" class="link">Показать</button>
             </div>
-            <div class="filters-container-color">
-                <h3 class="section-subtitle">Цвет</h3>
-                <ul class="option-check-select-list">
-                    <li class="option-check-select-item">
-                        <input  type="checkbox" title="option-select" class="option-check-select-input" checked>
-                        <span>Черный</span>
-                    </li>
-                    <li class="option-check-select-item">
-                        <input  type="checkbox" title="option-select" class="option-check-select-input">
-                        <span>Белый</span>
-                    </li>
-                    <li class="option-check-select-item">
-                        <input  type="checkbox" title="option-select" class="option-check-select-input" checked>
-                        <span>Синий</span>
-                    </li>
-                    <li class="option-check-select-item">
-                        <input  type="checkbox" title="option-select" class="option-check-select-input" checked>
-                        <span>Красный</span>
-                    </li>
-                    <li class="option-check-select-item">
-                        <input  type="checkbox" title="option-select" class="option-check-select-input">
-                        <span>Розовый</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="filters-container-bt">
-                <h3 class="section-subtitle">Bluetooth</h3>
-                <ul class="option-radio-select-list">
-                    <li class="option-radio-select-item">
-                        <input  type="radio" title="option-select" class="option-radio-select-input" checked>
-                        <span>Есть</span>
-                    </li>
-                    <li class="option-radio-select-item">
-                        <input  type="radio" title="option-select"  class="option-radio-select-input">
-                        <span>Нет</span>
-                    </li>
-                </ul>
-            </div>
-            <button class="link">Показать</button>
-        </div>
+        </form>
     </section>
     <section class="goods">
         <h2 class="section-title visually-hidden">Товары</h2>
@@ -174,14 +205,16 @@
             </li>
             <li class="goods-item">
                 <a href="professional-selfie-stick.html" class="goods-link">
-                    <img src="img/item-2.jpg" height="380" width="360" class="goods-img" alt="Профессиональная селфи-палка">
+                    <img src="img/item-2.jpg" height="380" width="360" class="goods-img"
+                         alt="Профессиональная селфи-палка">
                 </a>
                 <b class="goods-info">Профессиональная селфи-палка</b>
                 <span class="goods-price">1500 руб.</span>
             </li>
             <li class="goods-item">
                 <a href="nonsinkable-selfie-stick.html" class="goods-link">
-                    <img src="img/item-3.jpg" height="380" width="360" class="goods-img" alt="Непотопляемая селфи-палка">
+                    <img src="img/item-3.jpg" height="380" width="360" class="goods-img"
+                         alt="Непотопляемая селфи-палка">
                 </a>
                 <b class="goods-info">Непотопляемая селфи-палка</b>
                 <span class="goods-price">2500 руб.</span>
@@ -252,7 +285,7 @@
                 <a href="garanty.html" class="nav-footer-link">Гарантия</a>
             </li>
             <li class="nav-footer-item">
-                <a href="contacts.html"  class="nav-footer-link">Контакты</a>
+                <a href="contacts.html" class="nav-footer-link">Контакты</a>
             </li>
         </ul>
         <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
